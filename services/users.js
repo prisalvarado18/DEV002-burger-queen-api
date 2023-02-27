@@ -24,8 +24,7 @@ module.exports.createNewUser = async (email, password, roles) => {
 
 module.exports.getListUsers = async (page, limit) => {
   const startIndex = (page - 1) * limit;
-  const users = await User.find({}).sort('email').populate('roles').skip(startIndex);
-    .limit(limit);
+  const users = await User.find({}).sort('email').populate('roles').skip(startIndex).limit(limit);
   return users;
 };
 
