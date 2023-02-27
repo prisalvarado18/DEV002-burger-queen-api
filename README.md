@@ -1,15 +1,14 @@
 # API
 
-> Description
-
+> Application Programming Interface developed for an e-commerce website, which enables developers to carry out fundamental operations of user, product, and order management. These operations include creating (Create), reading (Read), updating (Update), and deleting (Delete) users, products, and orders using the API.
 ## Table of Contents
 
-* [Title](#title)
-* [Title](#title)
+* [Installation](#title)
+* [Usage](#title)
   * [Subheading](#subheading)
   * [Subheading](#subheading)
 
-## Install
+## Installation
 
 [npm][]:
 
