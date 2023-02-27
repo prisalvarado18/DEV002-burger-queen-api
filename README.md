@@ -19,21 +19,27 @@ npm install
 
 ## Usage
 
-### Node
+### Auth
 
-```js
+```POST / auth
 {
 	"email": "admin@localhost",
 	"password": "changeme",
-  "role": "admin"
+    "role": "admin"
 }
 ```
+#### Responses
+```200
 
-```js
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNjODRjNTE4ZTZjNGM2Y2Y5OWNiMyIsImlhdCI6MTY3NzU0MTYyNiwiZXhwIjoxNjc3NjI4MDI2fQ.FlLMKh8dkXYT0sCJbeW4mU6FqV0FonP5L48AzpMQUzA"
 }
 ```
+```400
+{
+    "message": "Email or password not found"
+}
+```Response
 
 ## Contributors
 
