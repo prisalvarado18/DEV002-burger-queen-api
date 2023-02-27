@@ -22,7 +22,8 @@ npm install name
 ### Node
 
 ```js
-const superagent = require('superagent');
+code
+```
 
 ## Contributors
 
