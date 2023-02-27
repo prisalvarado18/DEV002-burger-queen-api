@@ -22,7 +22,17 @@ npm install
 ### Node
 
 ```js
-code
+{
+	"email": "admin@localhost",
+	"password": "changeme",
+  "role": "admin"
+}
+```
+
+```js
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNjODRjNTE4ZTZjNGM2Y2Y5OWNiMyIsImlhdCI6MTY3NzU0MTYyNiwiZXhwIjoxNjc3NjI4MDI2fQ.FlLMKh8dkXYT0sCJbeW4mU6FqV0FonP5L48AzpMQUzA"
+}
 ```
 
 ## Contributors
