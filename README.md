@@ -13,7 +13,8 @@
 [npm][]:
 
 ```sh
-npm install name
+git clone https://github.com/prisalvarado18/DEV002-burger-queen-api.git
+npm install 
 ```
 
 ## Usage
