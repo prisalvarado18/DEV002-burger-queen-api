@@ -3,10 +3,23 @@
 > Application Programming Interface based on Express and MongoDB developed for an e-commerce website. It enables developers to carry out fundamental operations of user, product, and order management. These operations include creating (Create), reading (Read), updating (Update), and deleting (Delete) users, products, and orders using the API.
 ## Table of Contents
 
-* [Installation](#title)
+* [Server execution](#server-execution)
+* [Installation](#installation)
 * [Usage](#title)
-  * [Subheading](#subheading)
-  * [Subheading](#subheading)
+  * [Auth](#auth)
+  * [Users](#users)
+  * [Products](#products)
+  * [Orders](#orders)
+
+## Server execution
+1. Install Insomnia, Postman or your preferred platform. 
+2. In Postman, create a new project by clicking on the "New Project" button. Give your project a name and select the API that you want to test.
+3. Add the host/domain name of the website that's running the API:
+
+```
+https://palvaradoristorante.onrender.com/
+```
+
 
 ## Installation
 
