@@ -160,7 +160,7 @@ npm install
 }
 ```
 
-#### GET / {uid}:
+#### GET / users / {uid}:
 
 #### Responses
 
@@ -199,7 +199,7 @@ npm install
 }
 ```
 
-#### PUT / {uid}:
+#### PUT / users / {uid}:
 
 ```
 {
@@ -243,7 +243,7 @@ npm install
 }
 ```
 
-#### DELETE / users {uid}:
+#### DELETE / users / {uid}:
 
 #### Responses
 
