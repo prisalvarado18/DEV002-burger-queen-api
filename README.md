@@ -62,9 +62,24 @@ npm install
 ### 🤖 Artificial Intelligence and Bots
 
 | Request | Response| Status code | Message |
-| :---         |     :---:      |          ---: | :---         |
-| git status   | git status     | git status    | :---         |
+| :---         |    :---    |        :---:  | :---         |
+| { "email": "sol@systers.xyz", "password": "somePa$$w0rd", "roles": { "admin": true }} | 200     | {
+    "email": "sol@systers.xyz",
+    "password": "$2b$10$o7v4jjNEFq.7Vs5cvtnKJOhqPp8crRhDsZ7jUp2ZkDdg7pGL0Egta",
+    "roles": {
+        "_id": "63fd45d4efced8d444d565a7",
+        "admin": true,
+        "createdAt": "2023-02-28T00:07:48.821Z",
+        "updatedAt": "2023-02-28T00:07:48.821Z"
+    },
+    "_id": "63fd45d5efced8d444d565a9"
+}   | :---         |
 | git diff     | git diff       | git diff      | :---         |
+
+:---
+:---: 
+---:
+
 
 ```POST / auth
 
