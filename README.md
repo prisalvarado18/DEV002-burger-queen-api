@@ -61,10 +61,10 @@ npm install
 
 ### 🤖 Artificial Intelligence and Bots
 
-| Request             | Response                                                                                                                                   | Status Code                                                                                                                                  |
+| Request             | Response              | Status Code                                           | Message                                                                                       |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| POST / auth     | { "email": "sol@systers.xyz", "password": "12345678Pass@" }
-) | `![Amazon Alexa](https://img.shields.io/badge/amazon%20alexa-52b5f7?style=for-the-badge&logo=amazon%20alexa&logoColor=white)`             |
+| POST / auth     | { "email": "sol@systers.xyz", "password": "somePa$$w0rd" }
+) | `200`             |
 | Dependabot       | ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)                       | `![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)`                       |
 | Google Assistant | ![Google Assistant](https://img.shields.io/badge/google%20assistant-4285F4?style=for-the-badge&logo=google%20assistant&logoColor=white) | `![Google Assistant](https://img.shields.io/badge/google%20assistant-4285F4?style=for-the-badge&logo=google%20assistant&logoColor=white)` |
 
@@ -77,7 +77,7 @@ CREARRRRRRRRRRRRRRRRRRRR
 ```POST / auth
 {
   "email": "sol@systers.xyz",
-  "password": "12345678Pass@",
+  "password": "somePa$$w0rd",
   "roles": {
       "admin": true
   } 
