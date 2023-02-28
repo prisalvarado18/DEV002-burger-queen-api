@@ -21,25 +21,32 @@ npm install
 
 ### Auth
 
-```POST / auth
+[POST / auth][]:
+
+```sh
 {
 	"email": "admin@localhost",
-	"password": "changeme",
-    "role": "admin"
+	"password": "changeme"
 }
 ```
 #### Responses
+
+[Status code: 200][]:
+
 ```Status code: 200
 
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNjODRjNTE4ZTZjNGM2Y2Y5OWNiMyIsImlhdCI6MTY3NzU0MTYyNiwiZXhwIjoxNjc3NjI4MDI2fQ.FlLMKh8dkXYT0sCJbeW4mU6FqV0FonP5L48AzpMQUzA"
 }
 ```
+[Status code: 400][]:
+
 ```Status code: 400
 {
     "message": "Email or password not found"
 }
 ```
+[Status code: 404][]:
 
 ```Status code: 404
 {
