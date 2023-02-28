@@ -160,7 +160,7 @@ npm install
 }
 ```
 
-#### GET / {uid}:
+#### GET / users / {uid}:
 
 #### Responses
 
@@ -199,7 +199,7 @@ npm install
 }
 ```
 
-#### PUT / {uid}:
+#### PUT / users / {uid}:
 
 ```
 {
@@ -243,7 +243,7 @@ npm install
 }
 ```
 
-#### DELETE / users {uid}:
+#### DELETE / users / {uid}:
 
 #### Responses
 
@@ -269,13 +269,17 @@ npm install
 }
 ```
 * Status code: 403
+```
 {
     "message": "Admin permission is required, or you need to be the owner"
 }
+```
 * Status code: 404
+```
 {
     "message": "User with id 63fd45d5efced8d444d565a could not be found"
 }
+```
 
 ## Contributors
 
