@@ -243,7 +243,7 @@ npm install
 }
 ```
 
-#### DELETE / users / {uid}:
+#### DELETE / users /{uid}:
 
 #### Responses
 
