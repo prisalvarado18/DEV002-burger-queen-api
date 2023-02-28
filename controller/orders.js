@@ -6,6 +6,8 @@ const {
 
 const Order = require('../models/orders')
 
+const { isAdmin } = require('../middleware/auth');
+
 const { getProductById } = require('../services/products');
 const { buildLinks } = require('../utils/pagination');
 
@@ -92,6 +94,10 @@ module.exports = {
     }
   },
   deleteOrder: async (req, res, next) => {
+    const admin = await isAdmin(req);
+    if (!admin) {
+      return res.status(403).json({ message: 'Action requires admin permission' });
+    }
     try {
       const order = await getOrderById(req.params.orderId);
       if (!order) return res.status(404).json({ message: `Order with ID ${req.params.orderId} could not be found` });

@@ -455,7 +455,7 @@ npm install
 }
 ```
 
-#### DELETE / products:
+#### DELETE / products / {productId}:
 
 #### Responses
 
@@ -495,23 +495,189 @@ npm install
     "message": "Product with ID 63fd6b98efced8d444d566c6 could not be found"
 }
 ```
-#### METHOD / orders:
-
+#### PUT / orders / {id}:
 ```sh
+{
+    "client": "Andrea",
+    "userId": "63f7a2c9162654ee5347b5e4",
+    "products": [
+    { "qty": 1, "productId": "63fcdbef3012bfb39a86f5bf" }
+  ]
+}
 ```
+
 #### Responses
 
 * Status code: 200
+```sh
+{
+    "userId": "63f7a2c9162654ee5347b5e4",
+    "client": "Andrea",
+    "products": [
+        {
+            "qty": 1,
+            "productId": {
+                "_id": "63fcdbef3012bfb39a86f5bf",
+                "name": "Mineral Water",
+                "price": 20,
+                "image": "https://recetas123.net/wp-content/uploads/Chifles.jpg",
+                "type": "Brunch",
+                "createdAt": "2023-02-27T16:35:59.049Z",
+                "updatedAt": "2023-02-28T03:04:36.297Z"
+            },
+            "_id": "63fd746d4db075efb6f932b9"
+        }
+    ],
+    "status": "pending",
+    "_id": "63fd746d4db075efb6f932b8",
+    "dateEntry": "2023-02-28T03:26:37.756Z",
+    "dateProcessed": "2023-02-28T03:26:37.756Z"
+}
 ```
-```
+#### Responses
+
 * Status code: 400
-```
+```sh
+{
+    "message": "The specified userId or products could not be found"
+}
 ```
 * Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
 ```
+
+#### GET / orders:
+
+#### Responses
+
+* Status code: 200
+```sh
+```
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+
+#### GET / orders / {id}:
+
+#### Responses
+
+* Status code: 200
+```sh
+{
+    "_id": "63fd746d4db075efb6f932b8",
+    "userId": "63f7a2c9162654ee5347b5e4",
+    "client": "Andrea",
+    "products": [
+        {
+            "qty": 1,
+            "productId": {
+                "_id": "63fcdbef3012bfb39a86f5bf",
+                "name": "Mineral Water",
+                "price": 20,
+                "image": "https://recetas123.net/wp-content/uploads/Chifles.jpg",
+                "type": "Brunch",
+                "createdAt": "2023-02-27T16:35:59.049Z",
+                "updatedAt": "2023-02-28T03:04:36.297Z"
+            },
+            "_id": "63fd746d4db075efb6f932b9"
+        }
+    ],
+    "status": "pending",
+    "dateEntry": "2023-02-28T03:26:37.756Z",
+    "dateProcessed": "2023-02-28T03:26:37.756Z"
+}
+```
+
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 404
+```sh
+{
+    "message": "Order with ID 63fd746d4db075efb6f932b could not be found"
+}
+```
+#### PUT / orders / {id}:
+```sh
+{
+    "products": [
+    { "qty": 5, "productId": "63fcdbef3012bfb39a86f5bf" }
+  ]
+}
+```
+
+#### Responses
+
+* Status code: 200
+```sh
+{
+    "_id": "63fd746d4db075efb6f932b8",
+    "userId": "63f7a2c9162654ee5347b5e4",
+    "client": "Andrea",
+    "products": [
+        {
+            "qty": 5,
+            "productId": {
+                "_id": "63fcdbef3012bfb39a86f5bf",
+                "name": "Mineral Water",
+                "price": 20,
+                "image": "https://recetas123.net/wp-content/uploads/Chifles.jpg",
+                "type": "Brunch",
+                "createdAt": "2023-02-27T16:35:59.049Z",
+                "updatedAt": "2023-02-28T03:04:36.297Z"
+            },
+            "_id": "63fd79654db075efb6f932f0"
+        }
+    ],
+    "status": "pending",
+    "dateEntry": "2023-02-28T03:26:37.756Z",
+    "dateProcessed": "2023-02-28T03:47:49.361Z"
+}
+```
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 404
+```sh
+{
+    "message": "Order with ID 63fc4018725d45c8be7e60a4 could not be found"
+}
+```
+#### DELETE / products {id}:
+
+#### Responses
+
+* Status code: 200
+```sh
+```
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
 ```
 * Status code: 403
-```
+```sh
+{
+    "message": "Action requires admin permission"
+}
 ```
 
 ## Contributors

@@ -1,5 +1,6 @@
 const {
   requireAuth,
+  requireAdmin,
 } = require('../middleware/auth');
 
 const {
@@ -115,7 +116,7 @@ module.exports = (app, nextMain) => {
    * @code {401} si no hay cabecera de autenticación
    * @code {404} si la orderId con `orderId` indicado no existe
    */
-  app.put('/orders/:orderId', requireAuth, putOrder);
+  app.put('/orders/:orderId', requireAdmin, putOrder);
 
   /**
    * @name DELETE /orders
