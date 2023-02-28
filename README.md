@@ -61,13 +61,10 @@ npm install
 
 ### 🤖 Artificial Intelligence and Bots
 
-| Request             | Response              | Status Code                                           | Message                                                                                       |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| POST / auth     | { "email": "sol@systers.xyz", "password": "somePa$$w0rd" }
-) | `200`             |
-| Dependabot       | ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)                       | `![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)`                       |
-| Google Assistant | ![Google Assistant](https://img.shields.io/badge/google%20assistant-4285F4?style=for-the-badge&logo=google%20assistant&logoColor=white) | `![Google Assistant](https://img.shields.io/badge/google%20assistant-4285F4?style=for-the-badge&logo=google%20assistant&logoColor=white)` |
-
+| Request | Response| Status code | Message |
+| :---         |     :---:      |          ---: | :---         |
+| git status   | git status     | git status    | :---         |
+| git diff     | git diff       | git diff      | :---         |
 
 ```POST / auth
 
