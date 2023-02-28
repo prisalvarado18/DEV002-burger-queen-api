@@ -3,7 +3,7 @@
 > Application Programming Interface based on Express and MongoDB developed for an e-commerce website. It enables developers to carry out fundamental operations of user, product, and order management. These operations include creating (Create), reading (Read), updating (Update), and deleting (Delete) users, products, and orders using the API.
 ## Table of Contents
 
-* [Server execution](#server-execution)
+* [Server execution online](#server-execution-online)
 * [Installation](#installation)
 * [Usage](#title)
   * [Auth](#auth)
@@ -11,10 +11,11 @@
   * [Products](#products)
   * [Orders](#orders)
 
-## Server execution
+## Server execution online
 1. Install Insomnia, Postman or your preferred platform. 
 2. In Postman, create a new project by clicking on the "New Project" button. Give your project a name and select the API that you want to test.
 3. Add the host/domain name of the website that's running the API:
+4. Add the routes provided in this guide.
 
 ```
 https://palvaradoristorante.onrender.com/
@@ -292,6 +293,225 @@ npm install
 {
     "message": "User with id 63fd45d5efced8d444d565a could not be found"
 }
+```
+
+### Products
+#### POST / products:
+
+```sh
+{
+    "name": "Baileys Ice Cream",
+    "price": 100,
+    "image": "https://www.mainespirits.com/sites/default/files/styles/recipe_-_large_image_style/public/BaileysOverIceCream.jpg?itok=UHz5QnHT",
+    "type": "Brunch" 
+}
+```
+
+#### Responses
+
+* Status code: 200
+
+```sh
+{
+    "name": "Baileys Ice Cream",
+    "price": 100,
+    "image": "https://www.mainespirits.com/sites/default/files/styles/recipe_-_large_image_style/public/BaileysOverIceCream.jpg?itok=UHz5QnHT",
+    "type": "Brunch" 
+}
+```
+
+* Status code: 400
+```sh
+{
+    "message": "Neither name nor price was provided"
+}
+```
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 403
+```sh
+{
+    "statusCode": 403,
+    "message": "Forbidden"
+}
+```
+
+#### GET / products:
+
+#### Responses
+
+* Status code: 200
+```
+[
+    {
+        "_id": "63fcdd113012bfb39a86f5e8",
+        "name": "Vanilla Ice Cream",
+        "price": 500,
+        "image": "https://www.washingtonpost.com/resizer/qYpYDV1BjKI3ZimLblCjjFXhc2k=/arc-anglerfish-washpost-prod-washpost/public/KUFWIPXROII6ZLAWR67XDFGNPA.jpg",
+        "type": "Brunch",
+        "createdAt": "2023-02-27T16:40:49.840Z",
+        "updatedAt": "2023-02-27T16:40:49.840Z"
+    },
+    {
+        "_id": "63fd6b98efced8d444d566c6",
+        "name": "Baileys Ice Cream",
+        "price": 100,
+        "image": "https://www.mainespirits.com/sites/default/files/styles/recipe_-_large_image_style/public/BaileysOverIceCream.jpg?itok=UHz5QnHT",
+        "type": "Brunch",
+        "createdAt": "2023-02-28T02:48:56.372Z",
+        "updatedAt": "2023-02-28T02:48:56.372Z"
+    }
+]
+```
+
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+
+#### GET / products / {id}:
+
+#### Responses
+
+* Status code: 200
+```sh
+{
+    "_id": "63fcdd113012bfb39a86f5e8",
+    "name": "Vanilla Ice Cream",
+    "price": 500,
+    "image": "https://www.washingtonpost.com/resizer/qYpYDV1BjKI3ZimLblCjjFXhc2k=/arc-anglerfish-washpost-prod-washpost/public/KUFWIPXROII6ZLAWR67XDFGNPA.jpg",
+    "type": "Brunch",
+    "createdAt": "2023-02-27T16:40:49.840Z",
+    "updatedAt": "2023-02-27T16:40:49.840Z"
+}
+```
+* Status code: 401
+```
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 404
+```
+{
+    "message": "Product with ID 63fc3f54725d45c8be7e6089 could not be found"
+}
+```
+#### PUT / products / {id}:
+
+```sh
+{
+    "name": "Mineral Water",
+    "price": 20
+}
+```
+#### Responses
+
+* Status code: 200
+```sh
+{
+    "_id": "63fcdbef3012bfb39a86f5bf",
+    "name": "Mineral Water",
+    "price": 20,
+    "image": "https://recetas123.net/wp-content/uploads/Chifles.jpg",
+    "type": "Brunch",
+    "createdAt": "2023-02-27T16:35:59.049Z",
+    "updatedAt": "2023-02-28T02:56:21.926Z"
+}
+```
+* Status code: 400
+```sh
+{
+    "message": "Incorrect field/s. Please update a valid option"
+}
+```
+* Status code: 401
+```sh
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 403
+```sh
+{
+    "statusCode": 403,
+    "message": "Forbidden"
+}
+```
+* Status code: 404
+```sh
+{
+    "message": "Product with ID 63fcdd113012bfb39a86f5e7 could not be found"
+}
+```
+
+#### DELETE / products:
+
+#### Responses
+
+* Status code: 200
+```sh
+{
+    "_id": "63fd6b98efced8d444d566c6",
+    "name": "Baileys Ice Cream",
+    "price": 100,
+    "image": "https://www.mainespirits.com/sites/default/files/styles/recipe_-_large_image_style/public/BaileysOverIceCream.jpg?itok=UHz5QnHT",
+    "type": "Brunch",
+    "createdAt": "2023-02-28T02:48:56.372Z",
+    "updatedAt": "2023-02-28T02:48:56.372Z"
+}
+```
+* Status code: 400
+```
+```
+* Status code: 401
+```
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+* Status code: 403
+```
+{
+    "statusCode": 403,
+    "message": "Forbidden"
+}
+```
+* Status code: 404
+```
+
+{
+    "message": "Product with ID 63fd6b98efced8d444d566c6 could not be found"
+}
+```
+#### METHOD / orders:
+
+```sh
+```
+#### Responses
+
+* Status code: 200
+```
+```
+* Status code: 400
+```
+```
+* Status code: 401
+```
+```
+* Status code: 403
+```
 ```
 
 ## Contributors

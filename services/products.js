@@ -33,6 +33,7 @@ module.exports.updateItem = async (_id, body) => {
   // 2nd p: object with the data to be updated in the document
   // 3rd optional set to true: the updated document should be
   // returned instead of the original oNe
+  mongoose.Types.ObjectId.isValid(_id);
   const product = await Product.findByIdAndUpdate(_id, body, { new: true });
   return product;
 };
