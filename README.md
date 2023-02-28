@@ -29,17 +29,73 @@ npm install
 }
 ```
 #### Responses
-```200
+```Status code: 200
 
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNjODRjNTE4ZTZjNGM2Y2Y5OWNiMyIsImlhdCI6MTY3NzU0MTYyNiwiZXhwIjoxNjc3NjI4MDI2fQ.FlLMKh8dkXYT0sCJbeW4mU6FqV0FonP5L48AzpMQUzA"
 }
 ```
-```400
+```Status code: 400
 {
     "message": "Email or password not found"
 }
-```Response
+```
+
+```Status code: 404
+{
+    "message": "Invalid password"
+}
+```
+
+
+### Users
+
+```POST / auth
+
+```
+CREARRRRRRRRRRRRRRRRRRRR
+
+```POST / auth
+{
+  "email": "sol@systers.xyz",
+  "password": "12345678Pass@",
+  "roles": {
+      "admin": true
+  } 
+}
+```
+#### Responses
+```Status code: 200
+{
+    "email": "sol@systers.xyz",
+    "password": "$2b$10$o7v4jjNEFq.7Vs5cvtnKJOhqPp8crRhDsZ7jUp2ZkDdg7pGL0Egta",
+    "roles": {
+        "_id": "63fd45d4efced8d444d565a7",
+        "admin": true,
+        "createdAt": "2023-02-28T00:07:48.821Z",
+        "updatedAt": "2023-02-28T00:07:48.821Z"
+    },
+    "_id": "63fd45d5efced8d444d565a9"
+}
+```
+```Status code: 400
+{
+    "message": "Neither email nor password was provided"
+}
+```
+
+```Status code: 401
+{
+    "statusCode": 401,
+    "message": "Unauthorized"
+}
+```
+```Status code: 403
+{
+    "message": "moon@systers.xyz has already been registered. Please use a different email address"
+}
+```
+
 
 ## Contributors
 
