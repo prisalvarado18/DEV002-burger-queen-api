@@ -12,7 +12,7 @@ module.exports.auth = async (req, res, next) => {
 
     // Verify if the supplied password matches the one stored in the database
     const existsPassword = await comparePassword(password, userFound.password);
-    if (!existsPassword) return res.status(404).json({ message: 'Invalid password' });
+    if (!existsPassword) return res.status(401).json({ message: 'Invalid password' });
 
     // Generate a unique JWT for a specific user based on their id
     const token = await generateJWT(userFound._id);
