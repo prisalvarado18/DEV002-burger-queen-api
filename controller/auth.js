@@ -16,7 +16,10 @@ module.exports.auth = async (req, res, next) => {
 
     // Generate a unique JWT for a specific user based on their id
     const token = await generateJWT(userFound._id);
-    return res.json({ token });
+    return res.json({ token, data:{
+      email: email,
+      admin: userFound.roles.admin
+    } });
   } catch (err) {
     return next(err);
   }
